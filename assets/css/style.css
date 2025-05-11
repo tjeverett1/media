@@ -1614,4 +1614,26 @@ body.newsfeed .hero .custom-list em {
   margin: 0 0.25em !important;
 }
 
-
+.full-screen-grid {
+    height: 80vh;
+  }
+  .full-screen-grid .grid-item {
+    position: relative;
+    overflow: hidden;
+  }
+  .full-screen-grid img,
+  .full-screen-grid video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .description-box {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  

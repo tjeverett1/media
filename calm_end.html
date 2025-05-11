@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calm Space — End of Page</title>
+
+  <!-- your custom styles -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1d1d1f;
+      background-color: #fff;
+    }
+    .hero {
+      max-width: 640px;
+      margin: 8rem auto;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .search-container {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+    .search-container input[type="text"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 9999px 0 0 9999px;
+      outline: none;
+    }
+    .search-container button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: 2px solid #0071e3;
+      background-color: #0071e3;
+      color: #fff;
+      border-radius: 0 9999px 9999px 0;
+      cursor: pointer;
+    }
+    .search-container button:hover {
+      background-color: #005bb5;
+      border-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+    <div class="container-fluid justify-content-between px-5">
+      <a href="profile.html" class="navbar-brand">
+        <img src="assets/images/users/user-4.jpg" alt="" class="rounded-circle" width="40">
+      </a>
+      <a href="index.html" class="btn btn-primary" id="calm-space-button">
+        Bring Me Back
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero / End‑of‑Page Section -->
+  <div class="hero">
+    <h1>You’ve reached the end of this page</h1>
+    <p class="lead mb-4">
+      Take a break—or search for specific content you’d like to see below.
+    </p>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input 
+        type="text" 
+        placeholder="Search Calm Space…" 
+        aria-label="Search site content"
+        id="site-search"
+      >
+      <button type="button" id="search-btn">
+        <i class="bx bx-search"></i>
+      </button>
+    </div>
+      <!-- Link to Settings -->
+    <p class="text-center mt-3">
+        change your media preferences in <a href="calm_settings.html" class="text-primary"> settings</a>.
+    </p>
+  </div>
+  
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('search-btn').addEventListener('click', () => {
+      const query = document.getElementById('site-search').value.trim();
+      if (!query) return;
+      // Replace with your real search URL or handler
+      window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    });
+
+    // allow pressing Enter to trigger search
+    document.getElementById('site-search')
+      .addEventListener('keyup', e => {
+        if (e.key === 'Enter') {
+          document.getElementById('search-btn').click();
+        }
+      });
+  </script>
+</body>
+</html>

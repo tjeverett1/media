@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calm Space</title>
-    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/components.css" rel="stylesheet">
-    <link href="assets/css/media.css" rel="stylesheet">
-    <link href="assets/css/chat.css" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calm Space</title>
+      
+        <!-- 1) Load Bootstrap first -->
+        <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+      
+        <!-- 2) Then your own styles -->
+        <link href="assets/css/style.css"       rel="stylesheet">
+        <link href="assets/css/components.css"  rel="stylesheet">
+        <link href="assets/css/media.css"       rel="stylesheet">
+        <link href="assets/css/chat.css"        rel="stylesheet">
+      </head>
 <body class="newsfeed">
     <!-- Top Banner -->
     <div class="container-fluid" id="wrapper">
@@ -45,67 +50,45 @@
 
     <!-- Main Content -->
     <!-- Add this just after your opening <div class="container mt-5"> -->
-    <div class="container mt-5">
-        <div class="row full-screen-grid">
-            <!-- Goldfish -->
-            <div class="col-6 col-md-3 grid-item">
-            <img src="assets/images/calm_photos/goldfish.jpg" alt="Goldfish tank">
-            </div>
-        
-            <!-- Bluefish -->
-            <div class="col-6 col-md-3 grid-item">
-            <img src="assets/images/calm_photos/bluefish.jpg" alt="Blue fish">
-            </div>
-        
-            <!-- Pufferfish -->
-            <div class="col-6 col-md-3 grid-item">
-            <img src="assets/images/calm_photos/pufferfish.jpg" alt="Pufferfish">
-            </div>
-        
-            <!-- Video + description -->
-            <div class="col-6 col-md-3 grid-item d-flex flex-column">
-            <video src="assets/images/calm_photos/20241228_181528_99.mp4" autoplay muted loop></video>
-            <div class="description-box">
-                <div>
-                <h4>My Day at the Aquarium</h4>
-                <p>
-                    Today I wandered through shimmering tanks full of goldfish,  
-                    marveled at the electric blue gourami, and laughed at the pufferfish puffing up on demand.  
-                    It was a kaleidoscope of color and curiosity.
-                </p>
-                </div>
-            </div>
+    <div class="container-fluid my-5">
+        <div class="row justify-content-center">
+            <div class="col-auto text-center">
+            <img 
+                src="assets/images/calm_photos/dorm_entrance.jpg" 
+                alt="Dorm entrance at dusk covered in blossoms" 
+                class="rounded shadow-sm"
+                style="width: 50vw; max-width: 90%;"
+            >
+            <p class="mt-3 lead mx-auto" style="max-width: 50vw;">
+                I was just wandering around campus one evening when I turned the corner and found this unexpectedly beautiful scene—petals carpeting the walkway, warm light spilling from the doorway, and a hush that felt like magic.
+            </p>
             </div>
         </div>
-    </div>
+        </div>
   
 
     <!-- Image Section -->
      
     <!-- Scroll to Next Page Arrow -->
-    <div class="text-center mt-5">
-        <a href="#next-section" class="btn btn-outline-primary" id="scroll-arrow">
-            <i class="bx bx-down-arrow-alt" style="font-size: 2rem;"></i>
+    <div class="text-center mb-8" style="margin-top: 20px;">
+        <a 
+          href="calm_page2.html"     
+          class="btn btn-outline-primary d-inline-flex align-items-center"
+          id="next‑page">                        <!-- give it a new id -->
+          <i class="bx bx-right-arrow-alt ml-2" style="font-size: 1.5rem;"></i>
         </a>
-    </div>
-
-    <!-- Next Section -->
-    <div id="next-section" class="container mt-5">
-        <div class="text-center">
-            <h2>Next Section</h2>
-            <p>Scroll down to explore more content.</p>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scroll to next section
-        document.getElementById('scroll-arrow').addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector('#next-section').scrollIntoView({ behavior: 'smooth' });
+      </div>
+    
+      <!-- Next Section Anchor -->
+      <div id="calm_page2.html"></div>
+    
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+      <script>
+        document.getElementById('scroll-arrow').addEventListener('click', e => {
+          e.preventDefault();
+          document.querySelector('#next-section').scrollIntoView({ behavior: 'smooth' });
         });
-    </script>
+      </script>
 </body>
 </html>

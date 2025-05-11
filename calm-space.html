@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calm Space</title>
+  <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    /* Use a clean system font and generous spacing */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1d1d1f;
+      background-color: #fff;
+    }
+    .hero {
+      max-width: 640px;
+      margin: 8rem auto;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+    }
+    .hero ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .hero li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+    /* custom bullet */
+    .hero li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: #0071e3;
+      border-radius: 50%;
+    }
+    .hero em {
+      font-style: italic;
+      font-weight: 500;
+    }
+    /* Next button */
+    #scroll-arrow {
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      transition: background-color 0.2s;
+    }
+    #scroll-arrow:hover {
+      background-color: rgba(0, 113, 227, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+    <div class="container-fluid justify-content-between px-5">
+      <a href="profile.html" class="navbar-brand">
+        <img src="assets/images/users/user-4.jpg" alt="" class="rounded-circle" width="40">
+      </a>
+      <a href="index.html" class="btn btn-primary" id="calm-space-button">
+        Bring Me Back
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Welcome to a new social media where:</h1>
+    <ul class="custom-list">
+        <li><i class="bx bx-right-arrow-alt bullet-icon"></i> there are no numbers, <em>ever</em></li>
+        <li><i class="bx bx-right-arrow-alt bullet-icon"></i> there is no endless scroll</li>
+        <li><i class="bx bx-right-arrow-alt bullet-icon"></i> you can control the media format (done with short form? we got you)</li>
+        <li><i class="bx bx-right-arrow-alt bullet-icon"></i> our site is designed <em>for</em> you, not to take advantage of you</li>
+      </ul>
+  </div>
+
+  <!-- Scroll to Next Page Arrow -->
+  <div class="text-center mb-8">
+    <a href="#next-section" class="btn btn-outline-primary d-inline-flex align-items-center" id="scroll-arrow">
+      Next <i class="bx bx-right-arrow-alt ml-2" style="font-size: 1.5rem;"></i>
+    </a>
+  </div>
+
+  <!-- Next Section Anchor -->
+  <div id="next-section"></div>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('scroll-arrow').addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector('#next-section').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

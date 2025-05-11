@@ -1518,3 +1518,44 @@ img.settings-icon {
 .weather-forecast .col-md-3:last-child {
     border-right: 0px;
 }
+
+.twitter-tweet,
+.twitter-video {
+  display: block !important;   /* inline‑block → block */
+  margin: 0 auto !important;   /* centers it */
+}
+iframe[src*="youtube.com"] {
+    display: block;          /* takes it out of inline flow        */
+    margin: 0 auto;          /* auto side‑margins = centered        */
+}
+
+
+  .custom-list {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  .custom-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    /* remove the extra left padding */
+    padding-left: 0 !important;
+  }
+
+  .custom-list li::before {
+    /* kill the .hero li::before pseudo‑bullet */
+    content: none !important;
+    display: none !important;
+  }
+
+  .bullet-icon {
+    color: #0071e3;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  /* your other .hero styles… */

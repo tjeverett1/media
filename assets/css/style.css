@@ -1530,32 +1530,88 @@ iframe[src*="youtube.com"] {
 }
 
 
-  .custom-list {
-    list-style: none !important;
-    padding: 0;
-    margin: 0;
-  }
+ /* ——— Custom centered bullet list ——— */
 
-  .custom-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-    /* remove the extra left padding */
-    padding-left: 0 !important;
-  }
+.custom-list {
+  /* remove default bullets and padding */
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
 
-  .custom-list li::before {
-    /* kill the .hero li::before pseudo‑bullet */
-    content: none !important;
-    display: none !important;
-  }
+  /* stack items and center them as blocks */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .bullet-icon {
-    color: #0071e3;
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-  }
+.custom-list li {
+  /* center icon + text in each item */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  /* your other .hero styles… */
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  white-space: nowrap;     /* prevent unwanted wraps */
+  text-align: center;      /* center text if it did wrap */
+
+  /* remove any leftover indenting */
+  padding-left: 0 !important;
+}
+
+/* kill any pseudo‐bullets you added earlier */
+.custom-list li::before {
+  content: none !important;
+  display: none !important;
+}
+
+.bullet-icon {
+  /* your arrow icon styling */
+  color: #0071e3;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.custom-list em {
+  /* space around your italicized text */
+  margin: 0 0.25em;
+}
+/* Put this at the end of your stylesheet, after all other rules */
+body.newsfeed .hero .custom-list {
+  list-style: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.newsfeed .hero .custom-list li {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 1rem !important;
+  font-size: 1.25rem !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  padding-left: 0 !important;
+}
+
+body.newsfeed .hero .custom-list li::before {
+  content: none !important;
+  display: none !important;
+}
+
+body.newsfeed .hero .custom-list .bullet-icon {
+  color: #0071e3 !important;
+  font-size: 1.5rem !important;
+  margin-right: 0.5rem !important;
+}
+
+body.newsfeed .hero .custom-list em {
+  margin: 0 0.25em !important;
+}
+
+

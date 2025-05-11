@@ -92,18 +92,3 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-function addReactionsSection(containerId, likeCount, commentCount) {
-    const template = document.getElementById('reactions-template');
-    const clone = template.content.cloneNode(true);
-
-    // Set the like and comment counts
-    clone.querySelector('.like-count').textContent = likeCount;
-    clone.querySelector('.comment-count').textContent = commentCount;
-
-    // Append the cloned template to the specified container
-    const container = document.getElementById(containerId);
-    container.appendChild(clone);
-}
-
-addReactionsSection('video-container', 120, 45);
-addReactionsSection('d-block mt-3', 67, 10);

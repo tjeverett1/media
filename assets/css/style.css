@@ -1636,4 +1636,23 @@ body.newsfeed .hero .custom-list em {
     text-align: center;
     padding: 1rem;
   }
+  .posts-section .post .media {
+    display: flex;
+    flex-direction: column !important;
+  }
   
+  .posts-section .post .media > * {
+    width: 100%;
+    margin-bottom: 1rem;  /* space between rows */
+  }
+  .weather-fixed {
+    position: fixed;
+    top: 80px;          /* adjust to whatever vertical offset you like */
+    right: 30px;           /* flush against viewport’s right edge */
+    width: 280px;       /* match or tweak your card’s width */
+    z-index: 1050;      /* ensure it sits above other content */
+    margin-right: 0;    /* no extra gutter */
+  }
+  .flex-grow-2 {
+    flex-grow: 2 !important;
+  }

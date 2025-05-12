@@ -32,16 +32,28 @@
                             <li class="nav-item">
                                 <button type="button" class="btn nav-link p-0"><img src="assets/images/icons/theme/post-image.png" class="f-nav-icon" alt="Quick make post"></button>
                             </li>
-                            <li class="nav-item w-100 py-2">
-                                <form class="d-inline form-inline w-100 px-4">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control search-input" placeholder="Search for people, companies, events and more..." aria-label="Search" aria-describedby="search-addon">
-                                        <div class="input-group-append">
-                                            <button class="btn search-button" type="button"><i class='bx bx-search'></i></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </li>
+                            <form class="d-none d-lg-flex flex-grow-1 mx-3">
+                                <div class="input-group w-100">
+                                  <!-- add id="site-search" here -->
+                                  <input
+                                    id="site-search"
+                                    type="text"
+                                    class="form-control search-input"
+                                    placeholder="Search for people, companies, events and more…"
+                                    aria-label="Search"
+                                  >
+                                  <div class="input-group-append">
+                                    <!-- add id="search-btn" here -->
+                                    <button
+                                      id="search-btn"
+                                      class="btn search-button"
+                                      type="button"
+                                    >
+                                      <i class='bx bx-search'></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
                             <li class="nav-item">
                                 <a href="calm_messages.html" class="nav-link nav-icon nav-links message-drop drop-w-tooltip" data-placement="bottom" data-title="Messages">
                                     <img src="assets/images/icons/navbar/message.png" class="message-dropdown f-nav-icon" alt="navbar icon">
@@ -51,14 +63,28 @@
                         <ul class="navbar-nav mr-5 flex-row" id="main_menu">
                             <a class="navbar-brand nav-item mr-lg-5" href="calm-space.html"><img src="assets/images/calm_photos/U_icon.png" width="40" height="40" class="mr-3" alt="Logo"></a>
                             <!-- Collect the nav links, forms, and other content for toggling -->
-                            <form class="w-30 mx-2 my-auto d-inline form-inline mr-5">
-                                <div class="input-group">
-                                    <input type="text" class="form-control search-input w-75" placeholder="Search for people, companies, events and more..." aria-label="Search" aria-describedby="search-addon">
-                                    <div class="input-group-append">
-                                        <button class="btn search-button" type="button"><i class='bx bx-search'></i></button>
-                                    </div>
+                            <form id="main-search-form" class="d-none d-lg-flex flex-grow-1 mx-2" style="max-width: 400px;">  <!-- <-- limit total width -->
+                                <div class="input-group w-100">
+                                  <input
+                                    id="main-search-input"
+                                    name="q"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Search for people, content, news…"
+                                    aria-label="Search"
+                                    autocomplete="off"
+                                  >
+                                  <div class="input-group-append">
+                                    <button
+                                      id="main-search-button"
+                                      class="btn"
+                                      type="button"
+                                    >
+                                      <i class='bx bx-search'></i>
+                                    </button>
+                                  </div>
                                 </div>
-                            </form>
+                              </form>
                             
                             <li class="nav-item s-nav dropdown message-drop-li">
                                   <a href="calm_messages.html"
@@ -368,7 +394,135 @@
                                                                                         <div class="row">
                                                                                             <div class="col-md-12">
                                                                                                 <div class=                                                                                                    <div class="input-group-btn"> <                                                                                                        <button type="button" class="btn comment-form-btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class='bx bxs-smiley-happy'></i></button>                                                                                                          <button type="button" class="btn comment-form-btn comment-form-btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class='bx bx-camera'></i></button>                                                                                                          <button type="button" class="btn comment-form-btn comment-form-btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class='bx bx-microphone'></i></button>                                                                                                          <button type="button" class="btn comment-form-btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class='bx bx-file-blank'></i></button>i                                                                                                     </div>To                                                                                                </div>To                                                                                            </div>i                                                                                         </div>                                                                                      </form>                                                                                  </div>                                                                              </li>                                                                              <li class="media">                                                                                  <a href="#" class="pull-left">                                                                                      <img src="assets/images/users/user-2.jpg" alt="" class="img-circle">                                                                                  </a>                                                                                  <div class="media-body">er                                                                                    <div class="d-flex justify-content-between align-items-center w-100">                                                                                          <strong class="text-gray-dark"><a href="#" class="fs-8">Karen Minas</a></strong>                                                                                          <a href="#"><i class='bx bx-dots-horizontal-rounded'></i></a>nt                                                                                    </div>                                                                                      <span class="d-block comment-created-time">30 min ago</span>                                                                                      <p class="fs-8 pt-2">                                                                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.mi                                                                                        Lorem ipsum dolor sit amet, <a href="#">#consecteturadipiscing </a>.                                                                                      </p> c                                                                                    <div class="commentLR">                                                                                          <button type="button" class="btn btn-link fs-8">Like</button>                                                                                          <button type="button" class="btn btn-link fs-8">Reply</button>                                                                                      </div>ss                                                                                </div>                                                                              </li>                                                                              <li class="media">                                                                                  <a href="#" class="pull-left">                                                                                      <img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-circle">                                                                                  </a>                                                                                  <div class="media-body">co                                                                                    <div class="d-flex justify-content-between align-items-center w-100">                                                                                          <strong class="text-gray-dark"><a href="#" class="fs-8">Lia Earnest</a></strong>                                                                                          <a href="#"><i class='bx bx-dots-horizontal-rounded'></i></a>nt                                                                                    </div>                                                                                      <span class="d-block comment-created-time">2 hours ago</span>                                                                                      <p class="fs-8 pt-2">                                                                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.ou                                                                                        Lorem ipsum dolor sit amet, <a href="#">#consecteturadipiscing </a>.                                                                                      </p> c                                                                                    <div class="commentLR">                                                                                          <button type="button" class="btn btn-link fs-8">Like</button>                                                                                          <button type="button" class="btn btn-link fs-8">Reply</button>                                                                                      </div>ss                                                                                </div>                                                                              </li>                                                                              <li class="media">                                                                                  <a href="#" class="pull-left">                                                                                      <img src="https://bootdey.com/img/Content/user_3.jpg" alt="" class="img-circle">                                                                                  </a>                                                                                  <div class="media-body">co                                                                                    <div class="d-flex justify-content-between align-items-center w-100">                                                                                          <strong class="text-gray-dark"><a href="#" class="fs-8">Rusty Mickelsen</a></strong>                                                                                          <a href="#"><i class='bx bx-dots-horizontal-rounded'></i></a>nt                                                                                    </div>                                                                                      <span class="d-block comment-created-time">17 hours ago</span>                                                                                      <p class="fs-8 pt-2">                                                                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.ho                                                                                        Lorem ipsum dolor sit amet, <a href="#">#consecteturadipiscing </a>.                                                                                      </p> c                                                                                    <div class="commentLR">                                                                                          <button type="button" class="btn btn-link fs-8">Like</button>                                                                                          <button type="button" class="btn btn-link fs-8">Reply</button>                                                                                      </div>ss                                                                                </div>                                                                              </li>                                                                              <li class="media">                                                                                  <div class="media-body">                                                                                      <div class="comment-see-more text-center">                                                                                          <button type="button" class="btn btn-link fs-8">See More</button>                                                                                      </div>t-                                                                                </div>n                                                                             </li>                                                                          </ul>                                                                      </div>                                                                  </div>                                                              </div>iv                                                          </div>                                                      </div>                                                  </div>                                              </div>                                          </div>                                          <div class="col-md-3 profile-quick-media">le                                                                                   </div>
-                                     </div>                                  </div>                              </div>di                        </div>
-                    </div> 
-                </div>l             </div>        </div>ed    </div>ar      <!-- New message modal -->al    <div class="modal fade" id="newMessageModal" tabindex="-1" role="dialog" aria-labelledby="newMessageModalLabel" aria-hidden="true">di        <div class="modal-dialog modal-dialog-centered" role="document">re            <div class="modal-content">d"                <div class="modal-header new-msg-header"> <                    <h5 class="modal-title" id="newMessageModalLabel">Start new conversation</h5>ne                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">tt                        <span aria-hidden="true">&times;</span>mi                    </button>sp                </div>                  <div class="modal-body new-msg-body">la                    <form action="" method="" class="new-msg-form">ou                        <div class="form-group">                              <label for="message-text" class="col-form-label">Message:</label>te                            <textarea class="form-control search-input" rows="5" id="message-text" placeholder="Type a message..."></textarea>                          </div>"5                    </form>..                </div>/d                <div class="modal-footer new-msg-footer">me                    <button type="button" class="btn btn-primary btn-sm">Send message</button>                  </div>
-             </div>iv        </div>/j    </div> <bo    <!-- Core -->mi    <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>>    <script src="assets/js/popper/popper.min.js"></script>Op    <script src="assets/js/bootstrap/bootstrap.min.js"></script>ti    <!-- Optional -->ri    <script src="assets/js/app.js"></script>co    <script src="assets/js/components/components.js"></script></body></html>
+           <!-- Messages Container -->
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <!-- (Your other content here) -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- New Message Modal -->
+  <div class="modal fade" id="newMessageModal" tabindex="-1" role="dialog" aria-labelledby="newMessageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        
+        <!-- Modal Header -->
+        <div class="modal-header new-msg-header">
+          <h5 class="modal-title" id="newMessageModalLabel">Start new conversation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <!-- Modal Body -->
+        <div class="modal-body new-msg-body">
+          <form action="#" method="post" class="new-msg-form">
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea 
+                class="form-control search-input" 
+                id="message-text" 
+                rows="5" 
+                placeholder="Type a message..."
+              ></textarea>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Modal Footer -->
+        <div class="modal-footer new-msg-footer">
+          <button type="button" class="btn btn-primary btn-sm">Send message</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Core JS -->
+  <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/popper/popper.min.js"></script>
+  <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+  
+  <!-- Optional JS -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/components/components.js"></script>
+  <script>
+    // our lookup table
+    const searchMap = {
+      dogs:  "dogs1.html",
+      news:  "news1.html",
+      // …etc.
+    };
+  
+    // this runs once the DOM is ready
+    document.addEventListener("DOMContentLoaded", () => {
+      const input  = document.getElementById("site-search");
+      const button = document.getElementById("search-btn");
+  
+      function doSearch() {
+        const q = input.value.trim().toLowerCase();
+        if (!q) return;
+        if (searchMap[q]) {
+          window.location.href = searchMap[q];
+        } else {
+          window.location.href = `search.html?q=${encodeURIComponent(q)}`;
+        }
+      }
+  
+      button.addEventListener("click", doSearch);
+      input.addEventListener("keyup", e => {
+        if (e.key === "Enter") doSearch();
+      });
+    });
+  </script>
+  <script>
+    (function(){
+      const form      = document.getElementById('main-search-form');
+      const input     = document.getElementById('main-search-input');
+      const button    = document.getElementById('main-search-button');
+  
+      // 2a) Define a lookup table from normalized query → URL
+      const ROUTES = {
+        'dogs':   'dogs1.html',
+        'news':    'news1.html',
+        'main':  'calm_page1.html',
+        'settings':   'calm_settings.html',
+        'home':       'calm-space.html',
+        // you can add as many specific shortcuts as you like:
+        // 'alice':      'calm_profile.html?user=alice',
+        // 'bob':        'calm_profile.html?user=bob',
+      };
+  
+      function navigateToSearch() {
+        const raw = input.value.trim();
+        if (!raw) return;             // ignore empty searches
+        const q = raw.toLowerCase();
+  
+        // 2b) If it exactly matches a key in ROUTES, go there:
+        if (ROUTES[q]) {
+          window.location.href = ROUTES[q];
+          return;
+        }
+  
+        // 2c) Otherwise, you can fall back to a generic search-results page:
+        //    e.g. search_results.html?q=...
+        const encoded = encodeURIComponent(raw);
+        window.location.href = `search_results.html?q=${encoded}`;
+      }
+  
+      // 3) Listen for button clicks
+      button.addEventListener('click', navigateToSearch);
+  
+      // 4) Listen for Enter key in the input
+      input.addEventListener('keydown', function(e){
+        if (e.key === 'Enter') {
+          e.preventDefault();  // don’t submit a real form
+          navigateToSearch();
+        }
+      });
+    })();
+  </script>
+
+            </body></html>

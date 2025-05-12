@@ -86,21 +86,28 @@
       <div class="collapse navbar-collapse d-flex justify-content-between" id="mainNavbar">
 
         <!-- 1) A flex‐grow search form that fills all leftover space -->
-        <form class="d-none d-lg-flex flex-grow-1 mx-2">
-          <div class="input-group w-100">
-            <input
-              type="text"
-              class="form-control search-input"
-              placeholder="Search for people, content, news…"
-              aria-label="Search"
-            >
-            <div class="input-group-append">
-              <button class="btn search-button" type="button">
-                <i class='bx bx-search'></i>
-              </button>
+        <form id="main-search-form" class="d-none d-lg-flex flex-grow-1 mx-2" >
+            <div class="input-group w-100">
+              <input
+                id="main-search-input"
+                name="q"
+                type="text"
+                class="form-control"
+                placeholder="Search for people, content, news…"
+                aria-label="Search"
+                autocomplete="off"
+              >
+              <div class="input-group-append">
+                <button
+                  id="main-search-button"
+                  class="btn"
+                  type="button"
+                >
+                  <i class='bx bx-search'></i>
+                </button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
 
         <!-- 2) The left‐side icons -->
         <ul class="navbar-nav align-items-center">
@@ -173,6 +180,53 @@
       e.preventDefault();
       document.querySelector('#next-section').scrollIntoView({ behavior: 'smooth' });
     });
+  </script>
+  <script>
+    (function(){
+      const form      = document.getElementById('main-search-form');
+      const input     = document.getElementById('main-search-input');
+      const button    = document.getElementById('main-search-button');
+  
+      // 2a) Define a lookup table from normalized query → URL
+      const ROUTES = {
+        'dogs':   'dogs1.html',
+        'news':    'news1.html',
+        'main':  'calm_page1.html',
+        'settings':   'calm_settings.html',
+        'home':       'calm-space.html',
+        // you can add as many specific shortcuts as you like:
+        // 'alice':      'calm_profile.html?user=alice',
+        // 'bob':        'calm_profile.html?user=bob',
+      };
+  
+      function navigateToSearch() {
+        const raw = input.value.trim();
+        if (!raw) return;             // ignore empty searches
+        const q = raw.toLowerCase();
+  
+        // 2b) If it exactly matches a key in ROUTES, go there:
+        if (ROUTES[q]) {
+          window.location.href = ROUTES[q];
+          return;
+        }
+  
+        // 2c) Otherwise, you can fall back to a generic search-results page:
+        //    e.g. search_results.html?q=...
+        const encoded = encodeURIComponent(raw);
+        window.location.href = `search_results.html?q=${encoded}`;
+      }
+  
+      // 3) Listen for button clicks
+      button.addEventListener('click', navigateToSearch);
+  
+      // 4) Listen for Enter key in the input
+      input.addEventListener('keydown', function(e){
+        if (e.key === 'Enter') {
+          e.preventDefault();  // don’t submit a real form
+          navigateToSearch();
+        }
+      });
+    })();
   </script>
 </body>
 </html>

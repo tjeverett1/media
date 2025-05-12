@@ -60,6 +60,9 @@
   <!-- Top Banner -->
   <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
     <div class="container-fluid justify-content-between px-5">
+      <a class="navbar-brand" href="calm-space.html">
+        <img src="assets/images/calm_photos/U_icon.png" width="40" height="40" alt="Logo">
+      </a>
       <a href="calm_profile.html" class="navbar-brand">
         <img src="assets/images/users/user-4.jpg" alt="" class="rounded-circle" width="40">
       </a>
@@ -113,6 +116,38 @@
           document.getElementById('search-btn').click();
         }
       });
+   // 1) Define a map of search terms → target URLs
+   const searchMap = {
+    "dogs":   "dogs1.html",
+    "news":  "news1.html",
+    // …add as many as you need
+  };
+
+  function doSearch() {
+    const query = document
+      .getElementById('site-search')
+      .value
+      .trim()
+      .toLowerCase();
+
+    if (!query) return;
+
+    // 2) Look up the exact match in our map
+    if (searchMap[query]) {
+      window.location.href = searchMap[query];
+    } else {
+      // fallback: default search results page
+      window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    }
+  }
+
+  // wire up click & Enter
+  document.getElementById('search-btn')
+    .addEventListener('click', doSearch);
+  document.getElementById('site-search')
+    .addEventListener('keyup', e => {
+      if (e.key === 'Enter') doSearch();
+    });
   </script>
 </body>
 </html>

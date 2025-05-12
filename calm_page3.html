@@ -27,7 +27,7 @@
                                 <img src="assets/images/calm_photos/U_icon.png" width="40" height="40" alt="Logo">
                               </a>
                             <li class="nav-item s-nav dropdown d-mobile">
-                                <a href="calm_messages.html" class="nav-link nav-links nav-icon drop-w-tooltip" data-placement="bottom" data-title="Messages">
+                                <a href="messages.html" class="nav-link nav-links nav-icon drop-w-tooltip" data-placement="bottom" data-title="Messages">
                                     <img src="assets/images/icons/navbar/message.png" alt="navbar icon">
                                 </a>
                             </li>
@@ -53,48 +53,40 @@
 
     <!-- Main Content -->
     <!-- Add this just after your opening <div class="container mt-5"> -->
-    <div class="container mt-5">
-        <div class="row full-screen-grid">
-            <!-- Goldfish -->
-             
-            <div class="col-6 col-md-3 grid-item">
-            <img src="assets/images/calm_photos/goldfish.jpg" alt="Goldfish tank">
-            </div>
-        
-            <!-- Bluefish -->
-            <div class="col-6 col-md-3 grid-item">
-            <img src="assets/images/calm_photos/bluefish.jpg" alt="Blue fish">
-            </div>
-        
-            <!-- Pufferfish -->
-            <div class="col-6 col-md-3 grid-item">
-            <img src="assets/images/calm_photos/pufferfish.jpg" alt="Pufferfish">
-            </div>
-        
-            <!-- Video + description -->
-            <div class="col-6 col-md-3 grid-item d-flex flex-column">
-            <video src="assets/images/calm_photos/20241228_181528_99.mp4" autoplay muted loop></video>
-            <div class="description-box">
-                <div>
-                <h4>My Day at the Aquarium</h4>
-                <p>
-                    Today I wandered through shimmering tanks full of goldfish,  
-                    marveled at the electric blue gourami, and laughed at the pufferfish puffing up on demand.  
-                    It was a kaleidoscope of color and curiosity.
-                </p>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-  
+        <style>
+            /* wrapper that keeps 16:9 ratio, centers it, and adds margins */
+            .video-container {
+              position: relative;
+              width: 90vw;            /* fill 90% of the viewport width */
+              max-width: 1200px;      /* but don’t get wider than this */
+              padding-top: 56.25%;    /* 9/16 = 0.5625 → forces 16:9 */
+              margin: 2rem auto;      /* 2rem top/bottom margin, auto left/right */
+            }
+            .video-container iframe {
+              position: absolute;
+              top: 0; left: 0;
+              width: 100%; 
+              height: 100%;
+              border: 0;
+            }
+          </style>
+          
+          <div class="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/V-6m0jW0X9E?si=kK9aCPVAPyLAJSWE" 
+              title="YouTube video player" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>  
 
     <!-- Image Section -->
      
     <!-- Scroll to Next Page Arrow -->
     <div class="text-center mb-8" style="margin-top: 20px;">
         <a 
-          href="calm_page3.html"     
+          href="calm_end.html"     
           class="btn btn-outline-primary d-inline-flex align-items-center"
           id="next‑page">                        <!-- give it a new id -->
           <i class="bx bx-right-arrow-alt ml-2" style="font-size: 1.5rem;"></i>
@@ -102,7 +94,7 @@
       </div>
     
       <!-- Next Section Anchor -->
-      <div id="next-section"></div>
+      <div id="calm_page2.html"></div>
     
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>

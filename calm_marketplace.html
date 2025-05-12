@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Calm Space</title>
-  
+
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,6 @@
       font-size: 1.25rem;
       line-height: 1.4;
     }
-    /* custom bullet */
     .hero li::before {
       content: "";
       position: absolute;
@@ -54,7 +53,6 @@
       font-style: italic;
       font-weight: 500;
     }
-    /* Next button */
     #scroll-arrow {
       font-size: 1rem;
       font-weight: 500;
@@ -69,62 +67,69 @@
 </head>
 <body>
 
-  <!-- Top Banner -->
+  <!-- Full‑width Navbar -->
   <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container-fluid">
-      <!-- Brand -->
+      <!-- Left side: brand -->
       <a class="navbar-brand" href="calm-space.html">
         <img src="assets/images/calm_photos/U_icon.png" width="40" height="40" alt="Logo">
       </a>
 
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
+      <!-- Collapse trigger for mobile -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+              aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Make this a flex‐container that spreads its children out -->
-      <div class="collapse navbar-collapse d-flex justify-content-between" id="mainNavbar">
-
-        <!-- 1) A flex‐grow search form that fills all leftover space -->
-        <form class="d-none d-lg-flex flex-grow-1 mx-2">
-          <div class="input-group w-100">
-            <input
-              type="text"
-              class="form-control search-input"
-              placeholder="Search for people, content, news…"
-              aria-label="Search"
-            >
-            <div class="input-group-append">
-              <button class="btn search-button" type="button">
-                <i class='bx bx-search'></i>
-              </button>
-            </div>
-          </div>
-        </form>
-
-        <!-- 2) The left‐side icons -->
-        <ul class="navbar-nav align-items-center">
-          <li class="nav-item mx-2">
-            <a href="calm_messages.html" class="nav-link p-0">
+      <!-- Nav items -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mr-auto align-items-center">
+          <li class="nav-item d-lg-none">
+            <button type="button" class="btn nav-link p-0">
+              <img src="assets/images/icons/theme/post-image.png" class="f-nav-icon" alt="Quick make post">
+            </button>
+          </li>
+          <li class="nav-item d-lg-none w-100 py-2">
+            <form class="form-inline w-100">
+              <div class="input-group w-100">
+                <input type="text" class="form-control search-input" placeholder="Search…" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn search-button" type="button"><i class='bx bx-search'></i></button>
+                </div>
+              </div>
+            </form>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <form class="form-inline mr-4">
+              <div class="input-group">
+                <input type="text" class="form-control search-input" placeholder="Search for people, companies, events…">
+                <div class="input-group-append">
+                  <button class="btn search-button" type="button"><i class='bx bx-search'></i></button>
+                </div>
+              </div>
+            </form>
+          </li>
+          <li class="nav-item ml-lg-2">
+            <a href="calm_messages.html" class="nav-link">
               <img src="assets/images/icons/navbar/message.png" class="f-nav-icon" alt="Messages">
             </a>
           </li>
         </ul>
 
-        <!-- 3) The right‐side icons + button -->
+        <!-- Right side: profile, settings & button -->
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item mx-2">
+          <li class="nav-item">
             <a href="calm_profile.html" class="nav-link p-0">
               <img src="assets/images/users/user-4.jpg" class="rounded-circle" width="32" height="32" alt="User">
             </a>
           </li>
-          <li class="nav-item mx-2">
-            <a href="calm_settings.html" class="nav-link p-0">
+          <li class="nav-item mx-3">
+            <a href="calm_settings.html" class="nav-link">
               <img src="assets/images/icons/navbar/settings.png" width="24" height="24" alt="Settings">
             </a>
           </li>
-          <li class="nav-item mx-1">
-            <a href="index.html" class="btn btn-primary">
+          <li class="nav-item">
+            <a href="marketplace.html" class="btn btn-primary">
               Bring Me Back
             </a>
           </li>
@@ -135,41 +140,21 @@
 
   <!-- Hero Section -->
   <div class="hero">
-    <!-- Your new image, centered and responsive -->
-    <img 
-      src="assets/images/calm_photos/unstagram_whit_background.png" 
-      alt="A descriptive alt text" 
-      class="img-fluid mx-auto d-block mb-2" 
-      style="max-width: 300px;"
-    >
-  
-    <h1>Welcome to a new social media where:</h1>
-    <ul class="custom-list">
-        <li><i class="bx bx-right-arrow-alt bullet-icon"></i> there are no numbers, <em>ever</em></li>
-        <li><i class="bx bx-right-arrow-alt bullet-icon"></i> there is no endless scroll</li>
-        <li><i class="bx bx-right-arrow-alt bullet-icon"></i> you can control the media format (done with short form? we got you)</li>
-        <li><i class="bx bx-right-arrow-alt bullet-icon"></i> our site is designed <em>for</em> you, not to take advantage of you</li>
-      </ul>
+    <h1 style="font-size:4rem; font-weight:700; color:#d9534f; margin-top:4rem; margin-bottom:2rem;">
+      Whoops!
+    </h1>
+    <p class="lead">
+      We don’t sell items here. If you see something you’d like to buy, please check the creator's profile for
+      a link to their store! 😊
+    </p>
   </div>
 
-  <!-- Scroll to Next Page Arrow -->
-  <div class="text-center mb-3">
-    <a 
-      href="calm_page1.html"     
-      class="btn btn-outline-primary d-inline-flex align-items-center"
-      id="next‑page">                        <!-- give it a new id -->
-      Explore 
-      <i class="bx bx-right-arrow-alt ml-2" style="font-size: 1.5rem;"></i>
-    </a>
-  </div>
-
-  <!-- Next Section Anchor -->
   <div id="next-section"></div>
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
   <script>
-    document.getElementById('scroll-arrow').addEventListener('click', e => {
+    document.getElementById('scroll-arrow')?.addEventListener('click', e => {
       e.preventDefault();
       document.querySelector('#next-section').scrollIntoView({ behavior: 'smooth' });
     });
